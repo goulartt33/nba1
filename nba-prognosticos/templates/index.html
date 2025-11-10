@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NBA Prognósticos - Sistema de Análise de Jogos</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🏀 NBA Prognósticos</h1>
+            <p>Sistema Inteligente de Análise e Previsões de Jogos da NBA</p>
+        </div>
+
+        <div class="controls">
+            <button id="loadMatches" class="btn">🔄 Carregar Jogos NBA</button>
+            <button id="loadLiveMatches" class="btn btn-success">🔴 Jogos Ao Vivo</button>
+            <button id="generateBets" class="btn">💰 Gerar Bilhetes</button>
+            <button id="sendTelegram" class="btn btn-success">📱 Enviar para Telegram</button>
+        </div>
+
+        <div id="matchesContainer" class="matches-grid">
+            <div class="loading">
+                <div>👆 Clique em "Carregar Jogos NBA" para começar</div>
+            </div>
+        </div>
+
+        <div class="bets-section">
+            <h2>🎯 Bilhetes Recomendados</h2>
+            <div id="betsContainer">
+                <div class="alert">
+                    ⚡ Gere bilhetes baseados nas análises dos jogos
+                </div>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 30px; color: white; opacity: 0.8;">
+            <p>🏀 NBA Prognósticos - Análise em Tempo Real | 📊 Estatísticas de Jogadores | 🎯 Previsões Inteligentes</p>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/api.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bets.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/telegram.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>
