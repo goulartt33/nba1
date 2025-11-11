@@ -8,6 +8,7 @@ import os
 from dotenv import load_dotenv
 import random
 import re
+from bs4 import BeautifulSoup
 
 load_dotenv()
 
@@ -1024,4 +1025,5 @@ if __name__ == '__main__':
         app.run(debug=True, host='0.0.0.0', port=port, use_reloader=False)
     except OSError as e:
         print(f"❌ Erro na porta {port}: {e}")
+
         app.run(debug=True, host='0.0.0.0', port=5003, use_reloader=False)
