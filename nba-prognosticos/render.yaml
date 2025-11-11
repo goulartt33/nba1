@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: nba-prognosticos
+    env: python
+    plan: free
+    buildCommand: |
+      pip install Flask==2.3.3
+      pip install requests==2.31.0
+      pip install beautifulsoup4==4.12.2
+      pip install python-dotenv==1.0.0
+      pip install lxml==4.9.3
+      pip install gunicorn==21.2.0
+    startCommand: gunicorn app:app
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.0
